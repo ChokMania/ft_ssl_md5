@@ -14,7 +14,7 @@ This project will focus specifically on cryptographic hashing algorithms to soli
 
 ### Install
 <pre>
-<code>https://github.com/ChokMania/ft_ssl_md5.git</code>
+<code>git clone https://github.com/ChokMania/ft_ssl_md5.git</code>
 <code>cd ft_ssl_md5; make</code>
 </pre> 
 
