@@ -6,27 +6,11 @@
 /*   By: judumay <judumay@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 13:19:34 by judumay           #+#    #+#             */
-/*   Updated: 2020/11/02 16:34:32 by judumay          ###   ########.fr       */
+/*   Updated: 2020/11/03 11:44:56 by judumay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ssl.h"
-
-static void	get_verbose(char **av, int ac, t_ssl *ssl, int *flag)
-{
-	int i;
-	int j;
-
-	i = 0;
-	while (av[++i] || i == 1)
-		if (av[ssl->arg][0] == '-')
-		{
-			j = -1;
-			while (av[i][++j])
-				if (av[i][j] == 'v')
-					*flag = *flag | 32;
-		}
-}
 
 static int	ft_get_flags(char c, int *flag)
 {
@@ -107,7 +91,6 @@ void		ft_parsing(int ac, char **av, t_ssl *ssl)
 	char *str;
 
 	ssl->arg = 2;
-	get_verbose(av, ac, ssl, &ssl->flag);
 	while ((ssl->arg <= ac && !(ssl->flag & STDOUT)) || ssl->arg < ac)
 	{
 		if (!ssl->file && ssl->arg < ac && av[ssl->arg][0] == '-')
