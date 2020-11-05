@@ -11,6 +11,7 @@ NAME				=	ft_ssl
 WALL				=	yes
 WEXTRA				=	yes
 WERROR				=	yes
+WEVERYTHING			=	no
 
 FSANITIZE			=	no
 DEBUG				=	yes
